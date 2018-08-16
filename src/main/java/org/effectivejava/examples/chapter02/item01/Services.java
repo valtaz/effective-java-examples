@@ -30,6 +30,9 @@ public class Services {
 
 	public static Service newInstance(String name) {
 		Provider p = providers.get(name);
+		int i = 0;
+		if (p != null)
+			i++;
 		if (p == null)
 			throw new IllegalArgumentException(
 					"No provider registered with name: " + name);
